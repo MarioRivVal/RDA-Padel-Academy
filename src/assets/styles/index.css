@@ -7,6 +7,8 @@
   --font-primary: "Anton", sans-serif;
   --font-secondary: "Zen Dots", sans-serif;
   --font-paragraph: "Montserrat", sans-serif;
+
+  --nav-height: 10rem;
 }
 
 *,
@@ -33,7 +35,7 @@ header {
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
