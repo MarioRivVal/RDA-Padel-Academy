@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import s from "../assets/styles/layouts/mobileHeader.module.css";
 import ResponsiveImage from "../components/ResponsiveImage";
 import NavList from "../components/NavList";
 
 export default function MobileHeader() {
   const [isNavActive, setIsNavActive] = useState(false);
+  const navRef = useRef(null);
+  const backgroundRef = useRef(null);
+
+  useEffect(() => {
+    if (isNavActive && navRef.current && backgroundRef.current) {
+      const navHeight = navRef.current.offsetHeight;
+      backgroundRef.current.style.setProperty("--nav-height", `${navHeight}px`);
+      console.log(navHeight);
+    }
+  }, [isNavActive]);
 
   const handleOpenNav = () => {
     setIsNavActive(!isNavActive);
@@ -12,7 +22,10 @@ export default function MobileHeader() {
 
   return (
     <>
-      <div className={`${s.navigation} ${isNavActive ? s.active : ""}`}>
+      <div
+        ref={navRef}
+        className={`${s.navigation} ${isNavActive ? s.active : ""}`}
+      >
         <ResponsiveImage
           name="logos/logo-hor"
           ext="png"
@@ -23,10 +36,13 @@ export default function MobileHeader() {
           <span className={s.icon}>&nbsp;</span>
         </div>
         <div
+          ref={backgroundRef}
           className={`${s.background} ${isNavActive ? s.visible : ""}`}
           onClick={handleOpenNav}
         >
-          <NavList isVisible={isNavActive} />
+          <nav className={`${s.nav} ${isNavActive ? s.navVisible : ""}`}>
+            <NavList />
+          </nav>
         </div>
       </div>
       <main>
@@ -35,7 +51,7 @@ export default function MobileHeader() {
             name="raqueta"
             ext="png"
             alt="Raqueta de padel con logo de la Academia RDA"
-            className={s.raquetaImage}
+            className={` ${s.headerImage} ${s.raquetaImage}`}
           />
           <div className={s.heading} role="heading">
             <span id={s.span1} className={` ${s.headingSpan} u-text-green`}>
@@ -61,7 +77,7 @@ export default function MobileHeader() {
             name="coach-1"
             ext="jpeg"
             alt="Coach Mario con equipo de padel caminado en la pista"
-            className={s.coachImage}
+            className={` ${s.headerImage} ${s.coachImage}`}
           />
         </div>
       </main>

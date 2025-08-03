@@ -8,7 +8,7 @@
   --font-secondary: "Zen Dots", sans-serif;
   --font-paragraph: "Montserrat", sans-serif;
 
-  --nav-height: 10rem;
+  --nav-height: 11rem;
 }
 
 *,
@@ -71,4 +71,22 @@ a {
 .div-relleno-3 {
   background-color: yellow;
   height: 50rem;
+}
+
+@media (min-width: 480px) {
+  .headerImage {
+    height: 20rem;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 68.75%; /* ≈11px */
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 75%; /* 12px */
+  }
+}
+@media (min-width: 1280px) {
 }

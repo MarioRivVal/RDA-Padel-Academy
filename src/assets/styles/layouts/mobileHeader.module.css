@@ -1,5 +1,4 @@
 .navigation {
-  height: var(--nav-height);
   position: relative;
   display: flex;
   align-items: center;
@@ -76,7 +75,6 @@
 /* NAV LIST */
 
 .background {
-  min-height: 50rem;
   position: absolute;
   top: 100%;
   left: 0;
@@ -93,9 +91,9 @@
 }
 
 .visible {
+  height: calc(100dvh - var(--nav-height));
   height: calc(100vh - var(--nav-height));
   opacity: 1;
-  pointer-events: auto;
 }
 
 .nav {
@@ -155,7 +153,6 @@
     "academia academia";
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 1fr 1fr;
-
   font-family: var(--font-primary);
   text-transform: uppercase;
   font-size: 3rem;
@@ -163,7 +160,7 @@
 }
 
 .headingSpan {
-  font-size: 21vw; /* o usa clamp como arriba */
+  font-size: 21vw;
   line-height: 1;
 }
 
@@ -192,10 +189,10 @@
 #span6 {
   grid-area: academia;
   justify-self: center;
-  font-size: 22vw;
+  font-size: 22.5vw;
 }
 
-.raquetaImage {
+.headerImage {
   display: block;
   height: 15rem;
   border-radius: 2rem;
@@ -205,9 +202,11 @@
 .raquetaImage img {
   object-position: top;
 }
-.coachImage {
-  display: block;
-  height: 15rem;
-  border-radius: 2rem;
-  overflow: hidden;
+
+/* MEDIA QUERIES */
+
+@media (min-width: 480px) {
+  .headerImage {
+    height: 20rem;
+  }
 }
