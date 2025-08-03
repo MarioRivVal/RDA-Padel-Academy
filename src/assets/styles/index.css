@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap");
+
+:root {
+  --dark-color: #001713;
+  --light-color: #f5fffd;
+  --primary-color: #00f7c8;
+  --font-primary: "Anton", sans-serif;
+  --font-secondary: "Zen Dots", sans-serif;
+  --font-paragraph: "Montserrat", sans-serif;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+header {
+  background-color: var(--dark-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* UTILITIES */
+
+.u-text-green {
+  color: var(--primary-color);
+}
+
+.u-text-white {
+  color: var(--light-color);
+}
+
+.div-relleno {
+  background-color: red;
+  height: 50rem;
+}
+
+.div-relleno-2 {
+  background-color: blue;
+  height: 50rem;
+}
+
+.div-relleno-3 {
+  background-color: yellow;
+  height: 50rem;
+}
