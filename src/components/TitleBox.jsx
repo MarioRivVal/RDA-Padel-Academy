@@ -1,4 +1,4 @@
-import s from "../assets/styles/components/TitleBox.module.css";
+import s from "../assets/styles/components/titleBox.module.css";
 
 export default function TitleBox({ heading }) {
   const { title2, title3, paragraph } = heading;
