@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import MobileHeader from "./layouts/MobileHeader";
 import DesktopHeader from "./layouts/DesktopHeader";
+import ClasesSection from "./layouts/ClasesSection";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -18,6 +19,9 @@ function App() {
   return (
     <>
       <header>{isMobile ? <MobileHeader /> : <DesktopHeader />}</header>
+      <section id="clases">
+        <ClasesSection />
+      </section>
       <div className="div-relleno">
         {" "}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ratione

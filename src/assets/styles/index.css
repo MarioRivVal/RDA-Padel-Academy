@@ -33,6 +33,13 @@ header {
   background-color: var(--dark-color);
 }
 
+section {
+  background-image: url("../../../public/images/background.png");
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+
 img {
   width: 100%;
   height: auto;

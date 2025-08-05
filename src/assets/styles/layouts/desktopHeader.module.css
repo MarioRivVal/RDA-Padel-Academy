@@ -1,5 +1,5 @@
 .container {
-  max-width: 170rem;
+  max-width: 160rem;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(4, minmax(10rem, clamp(10rem, 10vw, 17rem)));
@@ -17,6 +17,7 @@
 }
 
 .logo {
+  width: 85%;
   grid-column: 1/5;
   align-self: center;
 }

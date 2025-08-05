@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title2 {
+  font-size: 2.4rem;
+  font-family: var(--font-secondary);
+  font-weight: 100;
+}
+.title3 {
+  font-size: 3.2rem;
+  font-family: var(--font-primary);
+  color: var(--primary-color);
+  font-weight: 100;
+  text-align: center;
+}
+.paragraph {
+  font-size: 2rem;
+  font-family: var(--font-paragraph);
+  text-align: center;
+  font-weight: 300;
+}
