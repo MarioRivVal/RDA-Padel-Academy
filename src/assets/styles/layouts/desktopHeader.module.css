@@ -1,0 +1,70 @@
+.container {
+  max-width: 170rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(4, minmax(10rem, clamp(10rem, 10vw, 17rem)));
+  gap: 1rem;
+  padding: 6rem 10rem;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+.headingSpan {
+  font-size: clamp(3rem, 10vw, 17rem);
+  line-height: 1;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+}
+
+.logo {
+  grid-column: 1/5;
+  align-self: center;
+}
+
+#p1 {
+  grid-column: 6/8;
+}
+#p2 {
+  grid-column: 8/-1;
+  justify-self: flex-end;
+}
+#p3 {
+  grid-row: 2/3;
+  grid-column: 4/10;
+}
+#p4 {
+  grid-row: 2/3;
+  grid-column: 10/-1;
+}
+#p5 {
+  grid-row: 3/4;
+  grid-column: 1/6;
+  justify-self: flex-start;
+}
+#p6 {
+  font-family: var(--font-secondary);
+  font-size: 3.4rem;
+  grid-column: 1 / 6;
+  align-self: flex-end;
+  justify-self: flex-start;
+}
+
+.headerImage {
+  display: block;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.raquetaImage {
+  grid-row: 2/3;
+  grid-column: 1/4;
+}
+
+.coachImage {
+  grid-column: 6/-1;
+  grid-row: 3/5;
+}
+
+.nav {
+  padding: 0 10rem;
+}

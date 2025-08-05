@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import s from "../assets/styles/layouts/mobileHeader.module.css";
 import ResponsiveImage from "../components/ResponsiveImage";
+import LetterByLetter from "../components/ui/LetterByLetter";
 import NavList from "../components/NavList";
 
 export default function MobileHeader() {
@@ -41,7 +42,7 @@ export default function MobileHeader() {
           onClick={handleOpenNav}
         >
           <nav className={`${s.nav} ${isNavActive ? s.navVisible : ""}`}>
-            <NavList />
+            <NavList type="mobile" />
           </nav>
         </div>
       </div>
@@ -54,29 +55,29 @@ export default function MobileHeader() {
             className={` ${s.headerImage} ${s.raquetaImage}`}
           />
           <div className={s.heading} role="heading">
-            <span id={s.span1} className={` ${s.headingSpan} u-text-green`}>
-              Una
-            </span>
-            <span id={s.span2} className={` ${s.headingSpan} u-text-white`}>
-              nueva
-            </span>
-            <span id={s.span3} className={` ${s.headingSpan} u-text-green`}>
-              Dimención
-            </span>
-            <span id={s.span4} className={` ${s.headingSpan} u-text-white`}>
-              de
-            </span>
-            <span id={s.span5} className={` u-text-white`}>
+            <p id={s.p1} className={`u-text-white`}>
+              <LetterByLetter word="Una" className={s.headingSpan} />
+            </p>
+            <p id={s.p2} className={`u-text-white`}>
+              <LetterByLetter word="nueva" className={s.headingSpan} />
+            </p>
+            <p id={s.p3} className={`u-text-green`}>
+              <LetterByLetter word="Dimensión" className={s.headingSpan} />
+            </p>
+            <p id={s.p4} className={`u-text-white`}>
+              <LetterByLetter word="de" className={s.headingSpan} />
+            </p>
+            <p id={s.p5} className={` u-text-white`}>
               Since 2023
-            </span>
-            <span id={s.span6} className={` ${s.headingSpan} u-text-green`}>
-              Academia
-            </span>
+            </p>
+            <p id={s.p6} className={`u-text-green`}>
+              <LetterByLetter word="Academia" className={s.headingSpan} />
+            </p>
           </div>
           <ResponsiveImage
             name="coach-1"
             ext="jpeg"
-            alt="Coach Mario con equipo de padel caminado en la pista"
+            alt="Coach Mario con material de padel caminado en la pista"
             className={` ${s.headerImage} ${s.coachImage}`}
           />
         </div>

@@ -1,0 +1,44 @@
+.list {
+  height: 100%;
+  list-style: none;
+  text-align: center;
+  border-top: solid 1px var(--primary-color);
+  border-bottom: solid 1px var(--primary-color);
+  margin: 0 auto;
+}
+
+.mobile {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+
+.desktop {
+  width: 100%;
+  max-width: calc(170rem - 20rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.desktop .link {
+  font-size: 2.8rem;
+}
+
+.mobile .link {
+  font-size: 2.6rem;
+}
+
+.link {
+  color: white;
+  transition: color 0.3s ease;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+}
+
+.link:hover {
+  color: var(--primary-color);
+}

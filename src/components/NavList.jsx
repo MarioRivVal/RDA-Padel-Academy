@@ -1,8 +1,8 @@
-import s from "../assets/styles/layouts/mobileHeader.module.css";
+import s from "../assets/styles/components/navList.module.css";
 
-export default function NavList() {
+export default function NavList({ type }) {
   return (
-    <ul className={s.list}>
+    <ul className={` ${s.list} ${type === "mobile" ? s.mobile : s.desktop}`}>
       <li>
         <a className={s.link} href="#clases">
           Clases
