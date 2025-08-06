@@ -8,6 +8,12 @@
   gap: 1rem;
 }
 
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .category {
   background-color: var(--dark-color);
   background-image: url("./images/background.png");
@@ -63,8 +69,8 @@
 
 .paragraph {
   font-family: var(--font-paragraph);
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: 1.4rem;
+  line-height: 1.4;
   text-align: center;
 }
 

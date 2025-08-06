@@ -7,9 +7,10 @@ import { clases } from "../data/headings";
 import ResponsiveImage from "../components/ResponsiveImage";
 import Button from "../components/Button";
 import ChevronIcon from "../assets/icons/chevron.svg?react";
+import { clasesList } from "../data/clasesSection";
 
 export default function ClasesSection() {
-  const [open, setOpen] = useState(false);
+  const [openId, setOpenId] = useState(null);
 
   const handleButtonClick = () => {
     console.log("Button clicked!");
@@ -19,36 +20,41 @@ export default function ClasesSection() {
     <div className={s.container}>
       <TitleBox heading={clases} />
       <div className={s.grid}>
-        <div className={s.category}>
-          <div className={`${s.content} ${open ? s.visible : ""}`}>
-            <h4 className={s.title4}>Particulares</h4>
-            <div className={s.description}>
-              <p className={s.paragraph}>
-                Formamos grupos de entrenamiento que se adapten a las
-                capacidades técnicas de cada alumno pero sobretodo, que la
-                personalidad de todos los alumnos encaje. El pago de esta
-                modalidad se realiza de forma mensual.
-              </p>
-              <Button
-                text="Saber más"
-                onClick={handleButtonClick}
-                className={sBtn.greenBtn}
-              />
+        {clasesList.map((type) => (
+          <div key={type.id} className={s.block}>
+            <div className={s.category}>
+              <div
+                className={`${s.content} ${
+                  openId === type.id ? s.visible : ""
+                }`}
+              >
+                <h4 className={s.title4}>{type.name}</h4>
+                <div className={s.description}>
+                  <p className={s.paragraph}>{type.paragraph}</p>
+                  <Button
+                    text="Saber más"
+                    onClick={handleButtonClick}
+                    className={sBtn.greenBtn}
+                  />
+                </div>
+                <div
+                  className={`${s.icon} ${
+                    openId === type.id ? s.iconOpen : ""
+                  }`}
+                  onClick={() => setOpenId(openId === type.id ? null : type.id)}
+                >
+                  <ChevronIcon width={26} height={26} />
+                </div>
+              </div>
             </div>
-            <div
-              className={`${s.icon} ${open ? s.iconOpen : ""}`}
-              onClick={() => setOpen(!open)}
-            >
-              <ChevronIcon width={26} height={26} />
-            </div>
+            <ResponsiveImage
+              name={`clases/clase-${type.id}`}
+              alt="Entrenador Mario enseñando tecnica de golpe"
+              className={s.image}
+              overlay={true}
+            />
           </div>
-        </div>
-        <ResponsiveImage
-          name="clases/clase-1"
-          alt="Entrenador Mario enseñando tecnica de golpe"
-          className={s.image}
-          overlay={true}
-        />
+        ))}
       </div>
     </div>
   );
