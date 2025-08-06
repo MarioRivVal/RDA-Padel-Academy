@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  margin-bottom: 4rem;
 }
 .titles {
   display: flex;
@@ -23,8 +24,9 @@
   text-align: center;
 }
 .paragraph {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: var(--font-paragraph);
   text-align: center;
   font-weight: 300;
+  line-height: 1.4;
 }

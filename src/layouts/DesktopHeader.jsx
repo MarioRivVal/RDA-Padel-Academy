@@ -12,6 +12,7 @@ export default function DesktopHeader() {
           ext="png"
           alt="Logo de la Academia RDA"
           className={s.logo}
+          overlay={false}
         />
         <p id={s.p1} className={`u-text-white`}>
           <LetterByLetter word="Una" className={s.headingSpan} />
@@ -24,6 +25,7 @@ export default function DesktopHeader() {
           ext="png"
           alt="Raqueta de padel con logo de la Academia RDA"
           className={`${s.headerImage} ${s.raquetaImage}`}
+          overlay={false}
         />
         <p id={s.p3} className={`u-text-green`}>
           <LetterByLetter word="Dimensión" className={s.headingSpan} />
@@ -39,6 +41,7 @@ export default function DesktopHeader() {
           ext="jpeg"
           alt="Coach Mario con material de padel caminado en la pista"
           className={` ${s.headerImage} ${s.coachImage}`}
+          overlay={true}
         />
         <p id={s.p6} className={` u-text-white`}>
           Since 2023

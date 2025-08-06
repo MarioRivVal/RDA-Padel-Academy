@@ -1,0 +1,12 @@
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 247, 202, 0.15);
+  pointer-events: none;
+}
