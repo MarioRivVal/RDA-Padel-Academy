@@ -12,8 +12,8 @@
 }
 
 *,
-::after,
-::before {
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -34,8 +34,7 @@ header {
 }
 
 section {
-  background-image: url("/images/background.png");
-  background-position: -25%;
+  background-image: url("/images/backgrounds/bg-main.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -65,26 +64,12 @@ a {
   color: var(--light-color);
 }
 
-.div-relleno {
-  background-color: red;
-  height: 50rem;
-}
-
-.div-relleno-2 {
-  background-color: blue;
-  height: 50rem;
-}
-
-.div-relleno-3 {
-  background-color: yellow;
-  height: 50rem;
-}
-
 @media (min-width: 768px) {
   html {
     font-size: 68.75%; /* ≈11px */
   }
 }
+
 @media (min-width: 1024px) {
   html {
     font-size: 75%; /* 12px */
@@ -94,5 +79,9 @@ a {
     padding-bottom: 6rem;
   }
 }
+
 @media (min-width: 1280px) {
+  html {
+    font-size: 80%;
+  }
 }

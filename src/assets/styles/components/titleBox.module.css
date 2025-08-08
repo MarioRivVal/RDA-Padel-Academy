@@ -24,9 +24,20 @@
   text-align: center;
 }
 .paragraph {
+  width: 80%;
   font-size: 1.8rem;
   font-family: var(--font-paragraph);
   text-align: center;
   font-weight: 300;
   line-height: 1.4;
+}
+@media (min-width: 1280px) {
+  .paragraph {
+    width: 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .paragraph {
+    width: 40%;
+  }
 }

@@ -21,8 +21,11 @@ export default function ClasesSection() {
       <TitleBox heading={clases} />
       <div className={s.grid}>
         {clasesList.map((type) => (
-          <div key={type.id} className={s.block}>
-            <div className={s.category}>
+          <div
+            key={type.id}
+            className={`${s.block} ${type.id === "2" ? s.reverse : ""}`}
+          >
+            <div className={`${s.category} category-${type.id}`}>
               <div
                 className={`${s.content} ${
                   openId === type.id ? s.visible : ""
