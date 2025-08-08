@@ -1,20 +1,30 @@
 .button {
-  border: none;
   padding: 1.2rem 2.4rem;
   border-radius: 2rem;
   font-family: var(--font-primary);
   text-transform: uppercase;
   font-size: 1.4rem;
-  color: var(--dark-color);
   line-height: 1;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .greenBtn {
+  border: none;
   background-color: var(--primary-color);
-  transition: background-color 0.3s ease;
+  color: var(--dark-color);
+}
+
+.blackBtn {
+  border: solid 0.1rem var(--primary-color);
+  background-color: var(--dark-color);
+  color: var(--light-color);
 }
 
 .greenBtn:hover {
   background-color: #00ad8c;
+}
+
+.blackBtn:hover {
+  background-color: #1a2e2b;
 }

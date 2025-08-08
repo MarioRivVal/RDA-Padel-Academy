@@ -5,7 +5,7 @@ import NavList from "../components/NavList";
 
 export default function DesktopHeader() {
   return (
-    <main>
+    <header>
       <div className={s.container}>
         <ResponsiveImage
           name="logos/logo-hor"
@@ -50,6 +50,6 @@ export default function DesktopHeader() {
       <nav className={s.nav}>
         <NavList type="desktop" />
       </nav>
-    </main>
+    </header>
   );
 }

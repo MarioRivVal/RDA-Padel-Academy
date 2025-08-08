@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import MobileHeader from "./layouts/MobileHeader";
 import DesktopHeader from "./layouts/DesktopHeader";
 import ClasesSection from "./layouts/ClasesSection";
+import Banner from "./layouts/Banner";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -18,11 +19,13 @@ function App() {
   }, []);
   return (
     <>
-      <header>{isMobile ? <MobileHeader /> : <DesktopHeader />}</header>
+      <main className="main">
+        {isMobile ? <MobileHeader /> : <DesktopHeader />}
+      </main>
       <section id="clases">
         <ClasesSection />
       </section>
-      <section></section>
+      <Banner />
     </>
   );
 }

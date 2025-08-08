@@ -47,7 +47,7 @@ export default function MobileHeader() {
           </nav>
         </div>
       </div>
-      <main>
+      <header>
         <div className={s.mainBox}>
           <ResponsiveImage
             name="raqueta"
@@ -84,7 +84,7 @@ export default function MobileHeader() {
             overlay={true}
           />
         </div>
-      </main>
+      </header>
     </>
   );
 }

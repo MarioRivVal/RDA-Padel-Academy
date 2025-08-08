@@ -1,0 +1,67 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background-color: var(--dark-color);
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+.logoImg {
+  display: block;
+  width: 45%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  font: 6.2rem/1.2 var(--font-primary, system-ui);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ctaMap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.6rem 0.6rem 1.2rem;
+  border: 2px solid var(--primary);
+  border-radius: 9999px; /* píldora */
+  color: var(--light-color);
+}
+
+.textMap {
+  font: 100 1.6rem var(--font-primary, system-ui);
+  white-space: nowrap;
+}
+
+.iconMap {
+  flex: 0 0 auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  display: grid;
+  place-items: center;
+  outline: none;
+}
+
+.iconMap svg {
+  width: 3rem;
+  height: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.iconMap:hover svg {
+  transform: rotate(-45deg);
+}

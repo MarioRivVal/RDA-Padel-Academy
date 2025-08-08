@@ -1,6 +1,6 @@
 import { useState } from "react";
 import s from "../assets/styles/layouts/clasesSection.module.css";
-import sBtn from "../assets/styles/components/button.module.css";
+import { greenBtn } from "../assets/styles/components/button.module.css";
 import TitleBox from "../components/TitleBox";
 
 import { clases } from "../data/headings";
@@ -37,7 +37,7 @@ export default function ClasesSection() {
                   <Button
                     text="Saber más"
                     onClick={handleButtonClick}
-                    className={sBtn.greenBtn}
+                    className={greenBtn}
                   />
                 </div>
                 <div
