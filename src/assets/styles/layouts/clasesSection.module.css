@@ -1,5 +1,5 @@
 .container {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
 }
 
 .grid {
@@ -129,7 +129,7 @@
 @media (min-width: 1280px) {
   .container {
     max-width: 160rem;
-    padding: 6rem 4rem;
+    padding: 8rem 4rem;
     margin: 0 auto;
   }
 
