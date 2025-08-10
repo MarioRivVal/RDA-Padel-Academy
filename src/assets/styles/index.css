@@ -32,16 +32,6 @@ body {
   background-color: var(--light-color);
 }
 
-.main {
-  background-color: var(--dark-color);
-}
-
-section {
-  background-image: url("/images/backgrounds/bg-main.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -55,6 +45,25 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.main,
+.black-section {
+  background-color: var(--dark-color);
+}
+
+.main {
+  border-radius: 0 0 2rem 2rem;
+}
+
+.black-section {
+  border-radius: 2rem;
+}
+
+.white-bg-section {
+  background-image: url("/images/backgrounds/bg-main.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* UTILITIES */
@@ -76,10 +85,6 @@ a {
 @media (min-width: 1024px) {
   html {
     font-size: 75%; /* 12px */
-  }
-
-  header {
-    padding-bottom: 6rem;
   }
 }
 

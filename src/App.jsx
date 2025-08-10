@@ -22,10 +22,12 @@ function App() {
       <main className="main">
         {isMobile ? <MobileHeader /> : <DesktopHeader />}
       </main>
-      <section id="clases">
+      <section id="clases" className="white-bg-section">
         <ClasesSection />
       </section>
-      <Banner />
+      <section className="black-section">
+        <Banner />
+      </section>
     </>
   );
 }
