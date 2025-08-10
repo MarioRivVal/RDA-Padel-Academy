@@ -178,6 +178,10 @@
   object-position: top;
 }
 
+.coachImage img {
+  height: 100%;
+}
+
 /* MEDIA QUERIES */
 
 @media (min-width: 480px) {

@@ -3,6 +3,8 @@ import MobileHeader from "./layouts/MobileHeader";
 import DesktopHeader from "./layouts/DesktopHeader";
 import ClasesSection from "./layouts/ClasesSection";
 import Banner from "./layouts/Banner";
+import IntroBox from "./components/IntroBox";
+import BannerLogo from "./components/BannerLogo";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -22,6 +24,13 @@ function App() {
       <main className="main">
         {isMobile ? <MobileHeader /> : <DesktopHeader />}
       </main>
+      <section className="white-bg-section">
+        <IntroBox />
+      </section>
+      <section className="black-section">
+        <BannerLogo />
+      </section>
+
       <section id="clases" className="white-bg-section">
         <ClasesSection />
       </section>

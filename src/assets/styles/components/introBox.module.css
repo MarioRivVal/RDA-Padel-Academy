@@ -1,0 +1,60 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.image {
+  height: 40vw;
+  display: block;
+  border-radius: 20rem;
+  overflow: hidden;
+}
+
+.image img {
+  height: 100%;
+  object-position: 0% 42%;
+}
+
+.title4 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-family: var(--font-secondary);
+  font-weight: 100;
+}
+
+.title3 {
+  font-size: 2.4rem;
+  font-family: var(--font-primary);
+  font-weight: 100;
+}
+
+.paragraph {
+  font-family: var(--font-paragraph);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.childrenBox {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-end;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.item span {
+  font-size: 1.4rem;
+  font-family: var(--font-secondary);
+}
