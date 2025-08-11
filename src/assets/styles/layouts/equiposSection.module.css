@@ -1,0 +1,23 @@
+.container {
+  padding: 6rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 110rem;
+    padding: 8rem 4rem;
+    margin: 0 auto;
+  }
+}

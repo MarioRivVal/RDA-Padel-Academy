@@ -39,14 +39,14 @@ export default function Banner() {
           Tu Academia de <span className="u-text-green">Pádel</span>
         </h1>
         <div
-          class={s.ctaMap}
+          className={s.ctaMap}
           role="group"
           aria-label="Ubicación. Pulsa el icono para abrir Maps"
         >
-          <p class={s.textMap}>¿Dónde estamos? Descúbrelo en Maps</p>
+          <p className={s.textMap}>¿Dónde estamos? Descúbrelo en Maps</p>
 
           <a
-            class={s.iconMap}
+            className={s.iconMap}
             href="https://maps.google.com/?q=RDA+Padel+Academia"
             target="_blank"
             rel="noopener noreferrer"

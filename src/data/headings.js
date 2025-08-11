@@ -5,4 +5,11 @@ const clases = {
     "Nuestro método es simple, el protagonista eres tú. Por ello te ofrecemos distintas alternativas para que las clases se adapten a tus necesidades.",
 };
 
-export { clases };
+const equipos = {
+  title2: "Equipos",
+  title3: "Nuestros Equipos, Nuestra Fuerza",
+  paragraph:
+    "En RDA Pádel Academy, la competición es parte del aprendizaje. Únete a nuestros equipos y vive el pádel al máximo. Compite, aprende y crece con nuestros equipos en ligas oficiales durante todo el año.",
+};
+
+export { clases, equipos };

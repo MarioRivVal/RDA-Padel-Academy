@@ -63,6 +63,10 @@ a {
   background-repeat: no-repeat;
 }
 
+.relleno {
+  height: 40rem;
+}
+
 /* UTILITIES */
 
 .u-text-green {

@@ -1,7 +1,6 @@
-.container {
+.box {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 6rem 2rem;
   gap: 4rem;
 }
 
@@ -26,7 +25,6 @@
 
 .title4 {
   font-size: 2rem;
-  color: var(--primary-color);
   font-family: var(--font-secondary);
   font-weight: 100;
 }
@@ -49,6 +47,9 @@
   align-items: flex-end;
   gap: 4rem;
 }
+/* --------------------------------------- */
+/* COACH SECTION CHILDREN */
+
 .item {
   display: flex;
   align-items: center;
@@ -60,10 +61,11 @@
   font-family: var(--font-secondary);
 }
 
+/* --------------------------------------- */
+
 @media (min-width: 768px) {
-  .container {
+  .box {
     grid-template-columns: 2fr 1fr;
-    padding: 6rem;
   }
 
   .content {
@@ -74,13 +76,5 @@
 
   .image {
     height: auto;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 110rem;
-    margin: 0 auto;
-    padding: 8rem;
   }
 }
