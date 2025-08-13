@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 2rem;
   padding: 0 2rem;
+  order: 2;
 }
 
 .image {
@@ -16,6 +17,7 @@
   display: block;
   border-radius: 20rem;
   overflow: hidden;
+  order: 1;
 }
 
 .image img {
@@ -37,18 +39,10 @@
 
 .paragraph {
   font-family: var(--font-paragraph);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.4;
 }
-
-.childrenBox {
-  display: flex;
-  align-items: flex-end;
-  gap: 4rem;
-}
-/* --------------------------------------- */
-/* COACH SECTION CHILDREN */
 
 .item {
   display: flex;
@@ -59,6 +53,24 @@
 .item span {
   font-size: 1.4rem;
   font-family: var(--font-secondary);
+}
+
+.item.black {
+  color: var(--);
+}
+
+.childrenEquiposTwo {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.childrenEquiposTwo svg {
+  width: 8rem;
+  height: auto;
+}
+
+.childrenEquiposThree {
 }
 
 /* --------------------------------------- */

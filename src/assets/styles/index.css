@@ -57,10 +57,15 @@ a {
   border-radius: 2rem;
 }
 
-.white-bg-section {
+.white-bg-section,
+.black-bg-section {
   background-image: url("/images/backgrounds/bg-main.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.black-bg-section {
+  background-color: var(--dark-color);
 }
 
 .relleno {

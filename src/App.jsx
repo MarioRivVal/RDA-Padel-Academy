@@ -26,9 +26,9 @@ function App() {
       <main className="main">
         {isMobile ? <MobileHeader /> : <DesktopHeader />}
       </main>
-      <section className="white-bg-section">
+      {/* <section className="white-bg-section">
         <IntroSection />
-      </section>
+      </section> */}
       <section className="black-section">
         <BannerLogo />
       </section>
@@ -41,7 +41,7 @@ function App() {
       <section id="clases" className="white-bg-section">
         <div className="relleno"></div>
       </section>
-      <section id="equipos" className="black-section">
+      <section id="equipos" className="black-bg-section">
         <EquiposSection />
       </section>
     </>

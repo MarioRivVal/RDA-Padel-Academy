@@ -10,23 +10,25 @@ import CheckIcon from "../assets/icons/check.svg?react";
 export default function IntroSection() {
   return (
     <div className={s.container}>
-      <IntroBox data={coachIntro}>
-        <ul>
-          <li className={item}>
-            <CheckIcon />
-            <span>Pasión</span>
-          </li>
-          <li className={item}>
-            <CheckIcon />
-            <span>Compromiso</span>
-          </li>
-          <li className={item}>
-            <CheckIcon />
-            <span>Excelencia</span>
-          </li>
-        </ul>
-        <Button text="Más sobre mi" onClick="" className={greenBtn} />
-      </IntroBox>
+      <div className={s.grid}>
+        <IntroBox data={coachIntro}>
+          <ul>
+            <li className={item}>
+              <CheckIcon />
+              <span>Pasión</span>
+            </li>
+            <li className={item}>
+              <CheckIcon />
+              <span>Compromiso</span>
+            </li>
+            <li className={item}>
+              <CheckIcon />
+              <span>Excelencia</span>
+            </li>
+          </ul>
+          <Button text="Más sobre mi" onClick="" className={greenBtn} />
+        </IntroBox>
+      </div>
     </div>
   );
 }
