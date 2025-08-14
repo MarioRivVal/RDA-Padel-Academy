@@ -3,9 +3,11 @@
 }
 
 .grid {
+  max-width: 110rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 6rem;
+  margin: 0 auto;
 }
 
 /* @media (min-width: 768px) {
