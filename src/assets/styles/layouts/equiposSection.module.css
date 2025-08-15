@@ -3,23 +3,19 @@
 }
 
 .grid {
-  max-width: 110rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 6rem;
+  max-width: 100rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
   margin: 0 auto;
 }
 
-/* @media (min-width: 768px) {
-  .container {ks
-    padding: 8rem;
+@media (min-width: 768px) {
+  .container {
+    padding: 8rem 4rem;
+  }
+
+  .grid {
+    gap: 6rem;
   }
 }
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 110rem;
-    padding: 8rem 4rem;
-    margin: 0 auto;
-  }
-} */

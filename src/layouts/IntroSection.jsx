@@ -1,5 +1,5 @@
-import s from "../assets/styles/layouts/introSection.module.css";
-import { item } from "../assets/styles/components/introBox.module.css";
+import s from "../assets/styles/layouts/equiposSection.module.css";
+import sIntroB from "../assets/styles/components/introBox.module.css";
 import { greenBtn } from "../assets/styles/components/button.module.css";
 
 import IntroBox from "../components/IntroBox";
@@ -12,16 +12,16 @@ export default function IntroSection() {
     <div className={s.container}>
       <div className={s.grid}>
         <IntroBox data={coachIntro}>
-          <ul>
-            <li className={item}>
+          <ul className={sIntroB.list}>
+            <li className={sIntroB.item}>
               <CheckIcon />
               <span>Pasión</span>
             </li>
-            <li className={item}>
+            <li className={sIntroB.item}>
               <CheckIcon />
               <span>Compromiso</span>
             </li>
-            <li className={item}>
+            <li className={sIntroB.item}>
               <CheckIcon />
               <span>Excelencia</span>
             </li>

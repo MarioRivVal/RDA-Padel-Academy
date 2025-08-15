@@ -26,9 +26,9 @@ function App() {
       <main className="main">
         {isMobile ? <MobileHeader /> : <DesktopHeader />}
       </main>
-      {/* <section className="white-bg-section">
+      <section className="white-bg-section">
         <IntroSection />
-      </section> */}
+      </section>
       <section className="black-section">
         <BannerLogo />
       </section>

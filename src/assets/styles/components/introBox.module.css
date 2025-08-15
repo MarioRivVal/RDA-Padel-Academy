@@ -66,16 +66,20 @@
   width: 8rem;
   height: auto;
 }
+.contactBox,
+.list {
+  margin-bottom: 2rem;
+}
 
-.childrenEquiposThree {
+.contactBox {
   display: flex;
 }
-.childrenEquiposThree > div:nth-child(1) {
+.contact:nth-child(1) {
   padding-right: 1rem;
   border-right: solid 0.1rem var(--light-color);
 }
 
-.childrenEquiposThree > div:nth-child(2) {
+.contact:nth-child(2) {
   padding-left: 1rem;
 }
 .contact {
@@ -101,21 +105,55 @@
 /* --------------------------------------- */
 
 @media (min-width: 768px) {
-  .box {
-    /* grid-template-columns: repeat(3, 1fr); */
+  .box:nth-child(1),
+  .box:nth-child(3) {
     grid-template-columns: 2fr 1fr;
   }
-
-  /* .grid div:nth-child(1) {
-  } */
+  .box:nth-child(2) {
+    grid-template-columns: 1fr 2fr;
+  }
+  .box:nth-child(2) .content {
+    order: 2;
+    justify-self: end;
+  }
+  .box:nth-child(2) .image {
+    justify-self: start;
+  }
 
   .content {
-    width: 80%;
+    width: 95%;
     padding: 0;
     justify-content: center;
+    gap: 3rem;
+  }
+
+  .contactBox,
+  .list {
+    margin-bottom: 3rem;
+  }
+
+  .contact:nth-child(1) {
+    padding-right: 4rem;
+  }
+
+  .contact:nth-child(2) {
+    padding-left: 4rem;
   }
 
   .image {
     height: 45vw;
+    max-height: 40rem;
+    max-width: 26rem;
+    justify-self: end;
+  }
+
+  .image img {
+    object-position: center 42%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    width: 90%;
   }
 }

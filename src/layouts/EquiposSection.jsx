@@ -1,9 +1,11 @@
 import s from "../assets/styles/layouts/equiposSection.module.css";
 import sIntroB from "../assets/styles/components/introBox.module.css";
+import { greenBtn } from "../assets/styles/components/button.module.css";
 
 import { equipos } from "../data/headings";
 import TitleBox from "../components/TitleBox";
 import IntroBox from "../components/IntroBox";
+import Button from "../components/Button";
 import { equiposOne, equiposTwo, equiposThree } from "../data/introBoxes";
 import TrophyIcon from "../assets/icons/trophy.svg?react";
 import CheckIcon from "../assets/icons/check.svg?react";
@@ -16,22 +18,20 @@ export default function EquiposSection() {
       <TitleBox heading={equipos} bg="black" />
       <div className={s.grid}>
         <IntroBox data={equiposOne} bg="black">
-          <div>
-            <ul>
-              <li className={sIntroB.item}>
-                <CheckIcon />
-                <span>Pasión</span>
-              </li>
-              <li className={sIntroB.item}>
-                <CheckIcon />
-                <span>Compromiso</span>
-              </li>
-              <li className={sIntroB.item}>
-                <CheckIcon />
-                <span>Excelencia</span>
-              </li>
-            </ul>
-          </div>
+          <ul>
+            <li className={sIntroB.item}>
+              <CheckIcon />
+              <span>Pasión</span>
+            </li>
+            <li className={sIntroB.item}>
+              <CheckIcon />
+              <span>Compromiso</span>
+            </li>
+            <li className={sIntroB.item}>
+              <CheckIcon />
+              <span>Excelencia</span>
+            </li>
+          </ul>
         </IntroBox>
 
         <IntroBox data={equiposTwo} bg="black">
@@ -50,20 +50,23 @@ export default function EquiposSection() {
 
         <IntroBox data={equiposThree} bg="black">
           <div className={sIntroB.childrenEquiposThree}>
-            <div className={sIntroB.contact}>
-              <span>Llamanos</span>
-              <div>
-                <PhoneIcon />
-                <a href="tel:628800205">628 800 205</a>
+            <div className={sIntroB.contactBox}>
+              <div className={sIntroB.contact}>
+                <span>Llamanos</span>
+                <div>
+                  <PhoneIcon />
+                  <a href="tel:628800205">628 800 205</a>
+                </div>
+              </div>
+              <div className={sIntroB.contact}>
+                <span>Escríbenos</span>
+                <div>
+                  <MailIcon />
+                  <a href="mailto:info@rdapadel.com">Info@rdapadel.com</a>
+                </div>
               </div>
             </div>
-            <div className={sIntroB.contact}>
-              <span>Escríbenos</span>
-              <div>
-                <MailIcon />
-                <a href="mailto:info@rdapadel.com">Info@rdapadel.com</a>
-              </div>
-            </div>
+            <Button text="Donde estamos" onClick="" className={greenBtn} />
           </div>
         </IntroBox>
       </div>
