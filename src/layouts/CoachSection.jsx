@@ -1,4 +1,4 @@
-import s from "../assets/styles/layouts/CoachSection.module.css";
+import s from "../assets/styles/layouts/coachSection.module.css";
 import TitleBox from "../components/TitleBox";
 import ResponsiveImage from "../components/ResponsiveImage";
 import { coach } from "../data/headings";
