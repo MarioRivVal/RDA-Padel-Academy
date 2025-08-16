@@ -17,12 +17,14 @@ export default function BannerLogo() {
   }, []);
 
   return (
-    <ResponsiveImage
-      name={`logos/logo-${isMobile ? "ver" : "hor"}`}
-      ext="png"
-      alt="Logo de RDA Padel"
-      className={s.image}
-      overlay={false}
-    />
+    <div className={s.imgBox}>
+      <ResponsiveImage
+        name={`logos/logo-${isMobile ? "ver" : "hor"}`}
+        ext="png"
+        alt="Logo de RDA Padel"
+        className={s.image}
+        overlay={false}
+      />
+    </div>
   );
 }

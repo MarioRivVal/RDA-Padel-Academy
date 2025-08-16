@@ -43,7 +43,6 @@
 
 .textMap {
   font: 100 1.6rem var(--font-primary, system-ui);
-  white-space: nowrap;
 }
 
 .iconMap {

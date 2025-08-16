@@ -1,3 +1,7 @@
+.imgBox {
+  padding: 4rem 0;
+}
+
 .image {
   width: 30%;
   max-width: 60rem;

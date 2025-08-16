@@ -12,4 +12,11 @@ const equipos = {
     "En RDA Pádel Academy, la competición es parte del aprendizaje. Únete a nuestros equipos y vive el pádel al máximo. Compite, aprende y crece con nuestros equipos en ligas oficiales durante todo el año.",
 };
 
-export { clases, equipos };
+const coach = {
+  title2: "Mi historia",
+  title3: "De la pasión al propósito",
+  paragraph:
+    "La historia de Mario Rodríguez y su compromiso por formar personas a través del pádel. Un referente que combina experiencia, formación y valores en cada clase",
+};
+
+export { clases, equipos, coach };
