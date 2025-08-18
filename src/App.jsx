@@ -7,6 +7,7 @@ import EquiposSection from "./layouts/EquiposSection";
 import IntroSection from "./layouts/IntroSection";
 import BannerLogo from "./components/BannerLogo";
 import CoachSection from "./layouts/CoachSection";
+import ImagenSection from "./layouts/ImagenSection";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -30,15 +31,15 @@ function App() {
         <IntroSection />
       </section>
       <section className="black-section">
-        <BannerLogo />
+        <Banner />
       </section>
       <section id="clases" className="white-bg-section">
         <ClasesSection />
       </section>
       <section className="black-section">
-        <Banner />
+        <BannerLogo />
       </section>
-      <section id="clases" className="white-bg-section">
+      <section id="eventos" className="white-bg-section">
         <div className="relleno"></div>
       </section>
       <section id="equipos" className="black-bg-section">
@@ -46,6 +47,12 @@ function App() {
       </section>
       <section id="coach" className="white-bg-section">
         <CoachSection />
+      </section>
+      <section className="black-section">
+        <BannerLogo />
+      </section>
+      <section id="coach" className="white-bg-section">
+        <ImagenSection />
       </section>
     </>
   );

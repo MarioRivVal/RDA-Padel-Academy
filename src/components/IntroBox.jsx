@@ -6,19 +6,21 @@ export default function IntroBox({ data, bg, children }) {
     <div className={s.box}>
       <div className={`${s.content} ${bg === "black" ? "u-text-white" : ""}`}>
         <div className={s.titles}>
-          <h4 className={s.title4}>{data.title4}</h4>
+          <h4 className={`${s.title4} u-text-green`}>{data.title4}</h4>
           <h3 className={s.title3}>{data.title3}</h3>
         </div>
         <p className={s.paragraph}>{data.paragraph}</p>
 
         <div className={s.childrenBox}>{children}</div>
       </div>
-      <ResponsiveImage
-        name={data.img.name}
-        alt={data.img.alt}
-        className={s[data.img.className]}
-        overlay={true}
-      />
+      {data.img?.name ? (
+        <ResponsiveImage
+          name={data.img.name}
+          alt={data.img.alt ?? ""}
+          className={data.img?.className ? s[data.img.className] : s.image}
+          overlay
+        />
+      ) : null}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 .container {
-  padding: 8rem 2rem;
+  padding: 8rem 2rem 0 2rem;
   max-width: 160rem;
   margin: 0 auto;
 }
@@ -48,13 +48,13 @@
 
 .coachImage {
   grid-column: 1/-1;
-  width: 50%;
+  width: 60%;
   justify-self: center;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 8rem 4rem;
+    padding: 8rem 4rem 0 4rem;
   }
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -67,13 +67,17 @@
 
 @media (min-width: 1024px) {
   .container {
-    padding: 8rem 10rem;
+    padding: 8rem 10rem 0 10rem;
   }
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     row-gap: 4rem;
     column-gap: 0;
+  }
+  .grid .item:nth-child(5),
+  .grid .item:nth-child(6) {
+    margin-bottom: 8rem;
   }
 
   .coachImage {

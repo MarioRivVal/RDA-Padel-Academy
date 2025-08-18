@@ -18,5 +18,11 @@ const coach = {
   paragraph:
     "La historia de Mario Rodríguez y su compromiso por formar personas a través del pádel. Un referente que combina experiencia, formación y valores en cada clase",
 };
+const imagen = {
+  title2: "Imagen propia",
+  title3: "Identidad fuerte y estilo único",
+  paragraph:
+    "No necesitamos etiquetas. Nuestro estilo habla por sí mismo en cada golpe, en cada alumno, en cada pista.",
+};
 
-export { clases, equipos, coach };
+export { clases, equipos, coach, imagen };

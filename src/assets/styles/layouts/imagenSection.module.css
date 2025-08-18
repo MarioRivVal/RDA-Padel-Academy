@@ -1,0 +1,65 @@
+.container {
+  padding: 8rem 2rem 0 2rem;
+  max-width: 160rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.images {
+  position: relative;
+}
+
+.fieldImg,
+.shirtImg {
+  display: block;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.shirtImg {
+  border: solid 1rem var(--light-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 75%;
+}
+
+.iconBox {
+  margin-top: 1rem;
+}
+
+.statsBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.amount {
+  font-family: var(--font-secondary);
+  font-size: 2.4rem;
+  text-align: center;
+}
+.label {
+  font-family: var(--font-paragraph);
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.content {
+  border-radius: 2rem;
+  background: var(--light-color);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
+  padding: 3rem 2rem;
+}
