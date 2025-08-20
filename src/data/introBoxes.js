@@ -42,11 +42,3 @@ export const equiposThree = {
     className: "image",
   },
 };
-
-export const imagenData = {
-  title4: "De la pista al mundo",
-  title3: "No seguimos tendencias, las creamos",
-  paragraph:
-    "Nos alejamos de las marcas, confiamos en que nuestro propio estilo llegue a todas las pistas del mundo a través de nuestra mejor publicidad, nuestros alumnos.",
-  img: {},
-};

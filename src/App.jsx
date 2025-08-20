@@ -54,6 +54,9 @@ function App() {
       <section id="coach" className="white-bg-section">
         <ImagenSection />
       </section>
+      <section className="black-section">
+        <Banner type="footer" />
+      </section>
     </>
   );
 }
