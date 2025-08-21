@@ -5,6 +5,12 @@ const clases = {
     "Nuestro método es simple, el protagonista eres tú. Por ello te ofrecemos distintas alternativas para que las clases se adapten a tus necesidades.",
 };
 
+const eventos = {
+  title2: "Eventos",
+  title3: "Juega. Vive. Comparte",
+  paragraph:
+    "Diseñamos y gestionamos eventos que combinan competición, emoción y visibilidad para nuestros colaboradores.",
+};
 const equipos = {
   title2: "Equipos",
   title3: "Nuestros Equipos, Nuestra Fuerza",
@@ -25,4 +31,4 @@ const imagen = {
     "No necesitamos etiquetas. Nuestro estilo habla por sí mismo en cada golpe, en cada alumno, en cada pista.",
 };
 
-export { clases, equipos, coach, imagen };
+export { clases, eventos, equipos, coach, imagen };

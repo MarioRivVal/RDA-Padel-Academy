@@ -8,6 +8,7 @@ import IntroSection from "./layouts/IntroSection";
 import BannerLogo from "./components/BannerLogo";
 import CoachSection from "./layouts/CoachSection";
 import ImagenSection from "./layouts/ImagenSection";
+import EventosSection from "./layouts/EventosSection";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -40,7 +41,7 @@ function App() {
         <BannerLogo />
       </section>
       <section id="eventos" className="white-bg-section">
-        <div className="relleno"></div>
+        <EventosSection />
       </section>
       <section id="equipos" className="black-bg-section">
         <EquiposSection />

@@ -70,10 +70,6 @@ a {
   background-color: var(--dark-color);
 }
 
-.relleno {
-  height: 40rem;
-}
-
 /* UTILITIES */
 
 .u-text-green {
