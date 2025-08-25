@@ -52,10 +52,10 @@ function App() {
       <section className="black-section">
         <BannerLogo />
       </section>
-      <section id="coach" className="white-bg-section">
+      <section id="imagen" className="white-bg-section">
         <ImagenSection />
       </section>
-      <section className="black-section">
+      <section id="contacto" className="black-section">
         <Banner type="footer" />
       </section>
     </>

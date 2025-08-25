@@ -9,18 +9,23 @@ export default function NavList({ type }) {
         </a>
       </li>
       <li>
-        <a className={s.link} href="#equipos">
-          Equipos
-        </a>
-      </li>
-      <li>
         <a className={s.link} href="#eventos">
           Eventos
         </a>
       </li>
       <li>
+        <a className={s.link} href="#equipos">
+          Equipos
+        </a>
+      </li>
+      <li>
+        <a className={s.link} href="#coach">
+          Coach
+        </a>
+      </li>
+      <li>
         <a className={s.link} href="#imagen">
-          Imagen Propia
+          Imagen
         </a>
       </li>
       <li>

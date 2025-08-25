@@ -10,21 +10,32 @@
 }
 
 .greenBtn {
-  border: none;
+  border: solid 0.1rem transparent;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+.blackBtn,
+.whiteBtn {
+  border: solid 0.1rem var(--primary-color);
+}
+
+.blackBtn {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+.whiteBtn {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.whiteBtn:hover {
   background-color: var(--primary-color);
   color: var(--dark-color);
 }
 
-.blackBtn {
-  border: solid 0.1rem var(--primary-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
-}
-
-.greenBtn:hover {
-  background-color: #00ad8c;
-}
-
+.greenBtn:hover,
 .blackBtn:hover {
-  background-color: #1a2e2b;
+  border: solid 0.1rem var(--primary-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
 }
