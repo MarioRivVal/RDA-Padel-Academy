@@ -9,6 +9,7 @@ import BannerLogo from "./components/BannerLogo";
 import CoachSection from "./layouts/CoachSection";
 import ImagenSection from "./layouts/ImagenSection";
 import EventosSection from "./layouts/EventosSection";
+import ScrollButtonsGroup from "./components/ui/ScrollButtonGroup";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -58,6 +59,7 @@ function App() {
       <section id="contacto" className="black-section">
         <Banner type="footer" />
       </section>
+      <ScrollButtonsGroup />
     </>
   );
 }

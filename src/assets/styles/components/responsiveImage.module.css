@@ -1,6 +1,7 @@
 .imageWrapper {
   position: relative;
   display: inline-block;
+  overflow: hidden;
 }
 
 .imageWrapper::after {
@@ -9,4 +10,13 @@
   inset: 0;
   background-color: rgba(0, 247, 202, 0.15);
   pointer-events: none;
+}
+
+.imageWrapper img {
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }

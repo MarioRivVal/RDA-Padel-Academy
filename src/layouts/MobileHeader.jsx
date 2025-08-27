@@ -16,27 +16,15 @@ export default function MobileHeader() {
     const syncOffsets = () => {
       if (!navRef.current) return;
       const h = navRef.current.offsetHeight;
-
-      // 1) Compensación del header (salto por nav fixed)
       document.documentElement.style.setProperty("--header-offset", `${h}px`);
-
-      // 2) Altura del nav para tu overlay del menú
       if (backgroundRef.current) {
         backgroundRef.current.style.setProperty("--nav-height", `${h}px`);
       }
     };
-
-    // Medición inicial
     syncOffsets();
-
-    // Re-medición en cada resize (ancho/alto/orientación)
     window.addEventListener("resize", syncOffsets);
-
-    // Re-medición si el propio nav cambia de tamaño (wrap de texto, cambios de logo, etc.)
     const ro = new ResizeObserver(syncOffsets);
     ro.observe(navRef.current);
-
-    // Opcional: re-medición al cargar fuentes (puede variar altura)
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(syncOffsets).catch(() => {});
     }
@@ -45,7 +33,7 @@ export default function MobileHeader() {
       window.removeEventListener("resize", syncOffsets);
       ro.disconnect();
     };
-  }, [isNavActive]); // si el menú abre/cierra y afecta altura, también se sincroniza
+  }, [isNavActive]);
 
   useEffect(() => {
     if (isNavActive && navRef.current && backgroundRef.current) {
@@ -71,6 +59,7 @@ export default function MobileHeader() {
           alt="Logo de la Academia RDA"
           className={s.logo}
           overlay={false}
+          delay={100}
         />
         <div className={s.btn} onClick={handleOpenNav}>
           <span className={s.icon}>&nbsp;</span>
@@ -93,6 +82,7 @@ export default function MobileHeader() {
             alt="Raqueta de padel con logo de la Academia RDA"
             className={` ${s.headerImage} ${s.raquetaImage}`}
             overlay={false}
+            delay={300}
           />
           <div className={s.heading} role="heading">
             <p id={s.p1} className={`u-text-white`}>
@@ -120,6 +110,7 @@ export default function MobileHeader() {
             alt="Coach Mario con material de padel caminado en la pista"
             className={` ${s.headerImage} ${s.coachImage}`}
             overlay={true}
+            delay={500}
           />
         </div>
       </header>

@@ -25,7 +25,8 @@ export default function ImagenSection() {
             ext="png"
             alt="Campo de Pádel visto desde el alto"
             className={s.fieldImg}
-            overlay={false}
+            overlay={true}
+            delay={200}
           />
           <div className={s.sliderBox}>
             <div

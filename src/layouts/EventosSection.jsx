@@ -32,8 +32,7 @@ export default function EventosSection() {
 
   const handleTab = (tab) => {
     setActiveTab(tab);
-    // Si prefieres que siempre empiece por el 0 al cambiar:
-    // setIndices((p) => ({ ...p, [tab]: 0 }));
+    setIndices((p) => ({ ...p, [tab]: 0 }));
   };
 
   const handleSlider = (direction) => {
@@ -91,6 +90,7 @@ export default function EventosSection() {
                   alt={item.alt}
                   ext="png"
                   className={s.imgBox}
+                  overlay={true}
                 />
 
                 <div className={s.description}>
