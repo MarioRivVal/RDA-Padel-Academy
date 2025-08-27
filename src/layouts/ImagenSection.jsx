@@ -1,13 +1,20 @@
+import { useState } from "react";
 import s from "../assets/styles/layouts/imagenSection.module.css";
 import { greenBtn } from "../assets/styles/components/button.module.css";
 import TitleBox from "../components/TitleBox";
 import { imagen } from "../data/headings";
 import ResponsiveImage from "../components/ResponsiveImage";
-import IntroBox from "../components/IntroBox";
 import ArrowGreenIcon from "../assets/icons/arrowGreen.svg?react";
 import Button from "../components/Button";
 
-export default function imagenSection() {
+export default function ImagenSection() {
+  const [slide, setSlide] = useState(0);
+  const shirtNumbers = [1, 2, 3];
+  const totalSlides = shirtNumbers.length;
+
+  const handleNext = () => {
+    setSlide((n) => (n + 1) % totalSlides);
+  };
   return (
     <div className={s.container}>
       <TitleBox heading={imagen} />
@@ -21,32 +28,39 @@ export default function imagenSection() {
             overlay={false}
           />
           <div className={s.sliderBox}>
-            <div className={s.sliders}>
-              <ResponsiveImage
-                name="imagen/shirt-1"
-                ext="png"
-                alt="Camisetas oficiales con logo RDA"
-                className={s.shirtImg}
-                overlay={false}
-              />
-              <ResponsiveImage
-                name="imagen/shirt-2"
-                ext="png"
-                alt="Camisetas oficiales con logo RDA"
-                className={s.shirtImg}
-                overlay={false}
-              />
-              <ResponsiveImage
-                name="imagen/shirt-3"
-                ext="png"
-                alt="Camisetas oficiales con logo RDA"
-                className={s.shirtImg}
-                overlay={false}
-              />
+            <div
+              className={s.sliders}
+              style={{
+                "--slides": totalSlides,
+                transform: `translateX(-${(100 / totalSlides) * slide}%)`,
+              }}
+            >
+              {shirtNumbers.map((n) => (
+                <ResponsiveImage
+                  key={n}
+                  name={`imagen/shirt-${n}`}
+                  ext="png"
+                  alt="Camisetas oficiales con logo RDA"
+                  className={s.shirtImg}
+                  overlay={false}
+                />
+              ))}
             </div>
           </div>
 
-          <div className={s.iconBox}>
+          <div
+            className={s.iconBox}
+            onClick={handleNext}
+            role="button"
+            aria-label="Siguiente"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                handleNext();
+              }
+            }}
+          >
             <ArrowGreenIcon />
           </div>
         </div>

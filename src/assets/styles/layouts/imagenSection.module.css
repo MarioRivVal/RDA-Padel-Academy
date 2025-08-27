@@ -19,37 +19,39 @@
   border-radius: 2rem;
   overflow: hidden;
 }
+
 .shirtImg {
-  overflow: hidden;
-  display: block;
+  flex: 0 0 calc(100% / var(--slides, 1));
   border-radius: 1rem;
+  padding: 1rem;
 }
 
 .shirtImg img {
   height: 100%;
+  border-radius: 1rem;
 }
 
 .sliderBox {
-  border-radius: 2rem;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 75%;
-
   background-color: var(--light-color);
+  border-radius: 2rem;
   overflow: hidden;
 }
 .sliders {
-  width: 300%;
-  padding: 1rem;
   display: flex;
-  gap: 1rem;
+  width: calc(var(--slides, 1) * 100%);
+  transition: transform 0.45s ease;
+  will-change: transform;
 }
 
 .iconBox {
   margin-top: 1rem;
   cursor: pointer;
 }
+
 .iconBox svg {
   transition: all 0.3s ease;
 }
