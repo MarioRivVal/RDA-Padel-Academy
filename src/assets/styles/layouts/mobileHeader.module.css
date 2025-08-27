@@ -1,10 +1,16 @@
 .navigation {
-  position: relative;
+  position: fixed; /* fijo desde el inicio */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 4rem 2rem 2rem 2rem;
   background-color: var(--dark-color);
+  z-index: 100;
 }
 
 .logo {
@@ -85,7 +91,6 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   opacity: 0;
-  pointer-events: none;
   transition: all 0.4s ease-in-out;
   z-index: 10;
 }
@@ -110,6 +115,10 @@
 }
 
 /* MAIN */
+
+.header {
+  margin-top: var(--header-offset, 0px);
+}
 
 .mainBox {
   padding: 0 2rem 4rem 2rem;

@@ -6,8 +6,46 @@ import NavList from "../components/NavList";
 
 export default function MobileHeader() {
   const [isNavActive, setIsNavActive] = useState(false);
+
   const navRef = useRef(null);
   const backgroundRef = useRef(null);
+
+  useEffect(() => {
+    if (!navRef.current) return;
+
+    const syncOffsets = () => {
+      if (!navRef.current) return;
+      const h = navRef.current.offsetHeight;
+
+      // 1) Compensación del header (salto por nav fixed)
+      document.documentElement.style.setProperty("--header-offset", `${h}px`);
+
+      // 2) Altura del nav para tu overlay del menú
+      if (backgroundRef.current) {
+        backgroundRef.current.style.setProperty("--nav-height", `${h}px`);
+      }
+    };
+
+    // Medición inicial
+    syncOffsets();
+
+    // Re-medición en cada resize (ancho/alto/orientación)
+    window.addEventListener("resize", syncOffsets);
+
+    // Re-medición si el propio nav cambia de tamaño (wrap de texto, cambios de logo, etc.)
+    const ro = new ResizeObserver(syncOffsets);
+    ro.observe(navRef.current);
+
+    // Opcional: re-medición al cargar fuentes (puede variar altura)
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(syncOffsets).catch(() => {});
+    }
+
+    return () => {
+      window.removeEventListener("resize", syncOffsets);
+      ro.disconnect();
+    };
+  }, [isNavActive]); // si el menú abre/cierra y afecta altura, también se sincroniza
 
   useEffect(() => {
     if (isNavActive && navRef.current && backgroundRef.current) {
@@ -47,7 +85,7 @@ export default function MobileHeader() {
           </nav>
         </div>
       </div>
-      <header>
+      <header className={s.header}>
         <div className={s.mainBox}>
           <ResponsiveImage
             name="raqueta"

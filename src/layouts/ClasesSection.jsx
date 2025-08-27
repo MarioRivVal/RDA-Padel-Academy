@@ -1,20 +1,14 @@
 import { useState } from "react";
 import s from "../assets/styles/layouts/clasesSection.module.css";
-import { greenBtn } from "../assets/styles/components/button.module.css";
 import TitleBox from "../components/TitleBox";
 
 import { clases } from "../data/headings";
 import ResponsiveImage from "../components/ResponsiveImage";
-import Button from "../components/Button";
 import ChevronIcon from "../assets/icons/chevron.svg?react";
 import { clasesList } from "../data/clasesSection";
 
 export default function ClasesSection() {
   const [openId, setOpenId] = useState(null);
-
-  const handleButtonClick = () => {
-    console.log("Button clicked!");
-  };
 
   return (
     <div className={s.container}>
@@ -34,11 +28,11 @@ export default function ClasesSection() {
                 <h4 className={s.title4}>{type.name}</h4>
                 <div className={s.description}>
                   <p className={s.paragraph}>{type.paragraph}</p>
-                  <Button
+                  {/* <Button
                     text="Saber más"
                     onClick={handleButtonClick}
                     className={greenBtn}
-                  />
+                  /> */}
                 </div>
                 <div
                   className={`${s.icon} ${

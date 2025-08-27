@@ -10,10 +10,6 @@ import FacebookIcon from "../assets/icons/facebook.svg?react";
 import InstagramIcon from "../assets/icons/instagram.svg?react";
 
 export default function Banner({ type }) {
-  const handleClickBtn = () => {
-    console.log("enviar mensaje");
-  };
-
   return (
     <>
       <div className={s.container}>
@@ -39,16 +35,30 @@ export default function Banner({ type }) {
 
         <header className={s.header}>
           <div className={s.btns}>
-            <Button
-              text="Escribenos"
-              onClick={handleClickBtn}
-              className={greenBtn}
-            />
-            <Button
-              text="Eventos"
-              onClick={handleClickBtn}
-              className={blackBtn}
-            />
+            {type === "footer" ? (
+              <>
+                <Button
+                  text="Info@rdapadel.com"
+                  href="mailto:nfo@rdapadel.com"
+                  className={greenBtn}
+                />
+                <Button
+                  text="628 800 205"
+                  href="tel:+34628800205"
+                  className={blackBtn}
+                />
+              </>
+            ) : (
+              <>
+                <Button
+                  text="Escribenos"
+                  className={greenBtn}
+                  href="https://wa.me/+34628800205"
+                  target="_blank"
+                />
+                <Button text="Eventos" className={blackBtn} href="#eventos" />
+              </>
+            )}
           </div>
           <h1 className={`${s.title} u-text-white`}>
             {type === "footer" ? (

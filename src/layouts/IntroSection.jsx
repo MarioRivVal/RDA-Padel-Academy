@@ -26,7 +26,7 @@ export default function IntroSection() {
               <span>Excelencia</span>
             </li>
           </ul>
-          <Button text="Más sobre mi" onClick="" className={greenBtn} />
+          <Button text="Más sobre mi" href="#coach" className={greenBtn} />
         </IntroBox>
       </div>
     </div>

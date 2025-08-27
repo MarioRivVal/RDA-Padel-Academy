@@ -118,11 +118,10 @@ export default function EventosSection() {
           {/* CTA + Flechas */}
           <div className={s.btnsBox}>
             <Button
-              text="Whatsapp"
-              onClick={() => {
-                /* tu handler */
-              }}
+              text="Escribenos"
               className={greenBtn}
+              href="https://wa.me/+34628800205"
+              target="_blank"
             />
             <div className={s.iconsBox}>
               <button
