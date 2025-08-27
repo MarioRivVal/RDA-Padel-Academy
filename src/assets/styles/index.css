@@ -80,6 +80,10 @@ a {
   color: var(--light-color);
 }
 
+.u-lowercase {
+  text-transform: lowercase !important;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 68.75%; /* ≈11px */

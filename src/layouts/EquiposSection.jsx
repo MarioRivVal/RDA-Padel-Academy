@@ -66,7 +66,12 @@ export default function EquiposSection() {
                 </div>
               </div>
             </div>
-            <Button text="Donde estamos" onClick="" className={greenBtn} />
+            <Button
+              text="Donde estamos"
+              className={greenBtn}
+              href="https://maps.google.com/?q=RDA+Padel+Academia"
+              target="_blank"
+            />
           </div>
         </IntroBox>
       </div>

@@ -14,19 +14,36 @@
   position: relative;
 }
 
-.fieldImg,
-.shirtImg {
+.fieldImg {
   display: block;
   border-radius: 2rem;
   overflow: hidden;
 }
-
 .shirtImg {
-  border: solid 1rem var(--light-color);
+  overflow: hidden;
+  display: block;
+  border-radius: 1rem;
+}
+
+.shirtImg img {
+  height: 100%;
+}
+
+.sliderBox {
+  border-radius: 2rem;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 75%;
+
+  background-color: var(--light-color);
+  overflow: hidden;
+}
+.sliders {
+  width: 300%;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .iconBox {

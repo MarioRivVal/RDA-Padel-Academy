@@ -23,10 +23,20 @@ export default function Banner({ type }) {
           />
           {type === "footer" && (
             <div className={s.socials}>
-              <a className={s.socialLink} href="">
+              <a
+                className={s.socialLink}
+                href="https://www.facebook.com/profile.php?id=100093455030408"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FacebookIcon />
               </a>
-              <a className={s.socialLink} href="">
+              <a
+                className={s.socialLink}
+                href="https://www.instagram.com/rda_padelacademy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <InstagramIcon />
               </a>
             </div>
@@ -40,7 +50,7 @@ export default function Banner({ type }) {
                 <Button
                   text="Info@rdapadel.com"
                   href="mailto:nfo@rdapadel.com"
-                  className={greenBtn}
+                  className={`${greenBtn} u-lowercase`}
                 />
                 <Button
                   text="628 800 205"

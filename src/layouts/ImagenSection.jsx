@@ -20,13 +20,32 @@ export default function imagenSection() {
             className={s.fieldImg}
             overlay={false}
           />
-          <ResponsiveImage
-            name="imagen/shirt-1"
-            ext="png"
-            alt="Camisetas oficiales con logo RDA"
-            className={s.shirtImg}
-            overlay={false}
-          />
+          <div className={s.sliderBox}>
+            <div className={s.sliders}>
+              <ResponsiveImage
+                name="imagen/shirt-1"
+                ext="png"
+                alt="Camisetas oficiales con logo RDA"
+                className={s.shirtImg}
+                overlay={false}
+              />
+              <ResponsiveImage
+                name="imagen/shirt-2"
+                ext="png"
+                alt="Camisetas oficiales con logo RDA"
+                className={s.shirtImg}
+                overlay={false}
+              />
+              <ResponsiveImage
+                name="imagen/shirt-3"
+                ext="png"
+                alt="Camisetas oficiales con logo RDA"
+                className={s.shirtImg}
+                overlay={false}
+              />
+            </div>
+          </div>
+
           <div className={s.iconBox}>
             <ArrowGreenIcon />
           </div>
@@ -58,7 +77,12 @@ export default function imagenSection() {
               llegue a todas las pistas del mundo a través de nuestra mejor
               publicidad, nuestros alumnos.
             </p>
-            <Button text="Saber más" onClick="" className={greenBtn} />
+            <Button
+              text="Saber más"
+              href="https://wa.me/+34628800205"
+              target="_blank"
+              className={greenBtn}
+            />
           </div>
         </div>
       </div>
