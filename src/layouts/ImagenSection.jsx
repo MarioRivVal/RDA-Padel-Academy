@@ -21,9 +21,9 @@ export default function ImagenSection() {
       <div className={s.grid}>
         <div className={s.images}>
           <ResponsiveImage
-            name="imagen/field"
+            name="logos/logo-big"
             ext="png"
-            alt="Campo de Pádel visto desde el alto"
+            alt="Logo RDA Padel"
             className={s.fieldImg}
             overlay={true}
             delay={200}
@@ -44,6 +44,7 @@ export default function ImagenSection() {
                   alt="Camisetas oficiales con logo RDA"
                   className={s.shirtImg}
                   overlay={false}
+                  once={true}
                 />
               ))}
             </div>

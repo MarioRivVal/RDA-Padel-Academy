@@ -39,10 +39,10 @@ export default function EquiposSection() {
             <TrophyIcon />
             <ul>
               <li className={`${sIntroB.item} u-text-white`}>
-                <span>2 Equipos Federados</span>
+                <span>Equipos Federados</span>
               </li>
               <li className={`${sIntroB.item} u-text-white`}>
-                <span>3 de SNP</span>
+                <span>Equipos de SNP</span>
               </li>
             </ul>
           </div>

@@ -29,9 +29,12 @@ function App() {
       <main className="main">
         {isMobile ? <MobileHeader /> : <DesktopHeader />}
       </main>
-      <section className="white-bg-section">
-        <IntroSection />
+      <section id="coach" className="white-bg-section">
+        <CoachSection />
       </section>
+      {/* <section className="white-bg-section">
+        <IntroSection />
+      </section> */}
       <section className="black-section">
         <Banner />
       </section>
@@ -47,12 +50,9 @@ function App() {
       <section id="equipos" className="black-bg-section">
         <EquiposSection />
       </section>
-      <section id="coach" className="white-bg-section">
-        <CoachSection />
-      </section>
-      <section className="black-section">
+      {/* <section className="black-section">
         <BannerLogo />
-      </section>
+      </section> */}
       <section id="imagen" className="white-bg-section">
         <ImagenSection />
       </section>

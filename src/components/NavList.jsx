@@ -4,6 +4,11 @@ export default function NavList({ type }) {
   return (
     <ul className={` ${s.list} ${type === "mobile" ? s.mobile : s.desktop}`}>
       <li>
+        <a className={s.link} href="#coach">
+          Quienes somos
+        </a>
+      </li>
+      <li>
         <a className={s.link} href="#clases">
           Clases
         </a>
@@ -18,11 +23,7 @@ export default function NavList({ type }) {
           Equipos
         </a>
       </li>
-      <li>
-        <a className={s.link} href="#coach">
-          Coach
-        </a>
-      </li>
+
       <li>
         <a className={s.link} href="#imagen">
           Imagen

@@ -15,7 +15,7 @@ export const coachHistory = [
   {
     id: 2,
     title: "Inicios",
-    paragraph: `"Es en 2011 cuando, tras varios años como jugador, me inicio como profesor de pádel de la mano de Sergio Álvarez (Netpadel.es) y no podía imaginar que se convertiría en mi nueva forma de vida." \nDe jugador apasionado a formador comprometido.`,
+    paragraph: `"Es en 2011 cuando, tras varios años como jugador, me inicio como profesor de pádel gracias a una sólida formación técnica y pedagógica y no podía imaginar que se convertiría en mi nueva forma de vida." \nDe jugador apasionado a formador comprometido.`,
     icon: <IniciosIcon />,
   },
   {

@@ -8,12 +8,14 @@ const ResponsiveImage = ({
   className,
   overlay,
   delay,
+  once,
 }) => {
   const { ref, style } = useRevealOnScroll({
     distance: 50,
     duration: 1000,
     delay: delay || 50,
     direction: "up",
+    once,
   });
 
   return (

@@ -22,7 +22,7 @@ const coach = {
   title2: "Mi historia",
   title3: "De la pasión al propósito",
   paragraph:
-    "La historia de Mario Rodríguez y su compromiso por formar personas a través del pádel. Un referente que combina experiencia, formación y valores en cada clase",
+    "La historia de Mario Rodríguez del Amo y su compromiso por formar personas a través del pádel. Un referente que combina experiencia, formación y valores en cada clase",
 };
 const imagen = {
   title2: "Imagen propia",

@@ -9,7 +9,7 @@ export function useRevealOnScroll({
   duration = 600, // ms de transición
   delay = 0, // ms
   easing = "cubic-bezier(0.22, 1, 0.36, 1)",
-  once = true, // si false, se oculta al salir de viewport
+  once = false, // si false, se oculta al salir de viewport
   direction = "up", // "up" | "down" | "left" | "right"
 } = {}) {
   const ref = useRef(null);

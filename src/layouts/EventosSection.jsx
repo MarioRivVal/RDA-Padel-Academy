@@ -141,6 +141,27 @@ export default function EventosSection() {
             </div>
           </div>
         </div>
+
+        {/* PARTNERS */}
+        <div className={s.partnersBox}>
+          <h3>
+            <span className="u-text-green">Partners,</span> que suman valor
+          </h3>
+          <div className={s.partners}>
+            <ResponsiveImage
+              name="partners/netneo"
+              ext="png"
+              alt="Logo de netneo.es"
+              overlay={false}
+            />
+            <ResponsiveImage
+              name="partners/adarsa"
+              ext="png"
+              alt="Logo de grupo Adarsa"
+              overlay={false}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

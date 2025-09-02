@@ -24,7 +24,7 @@ export const equiposTwo = {
   title4: "Equipos Federados y SNP",
   title3: "Presencia en ligas oficiales",
   paragraph:
-    "Actualmente contamos con 2 equipos federados, uno en 1ª Categoría Masculina, y 3 equipos en la liga SNP, incluyendo nuestro equipo femenino de categoría 1000",
+    "Actualmente contamos con equipos federados, en 1ª Categoría Masculina, y equipos en la liga SNP, incluyendo nuestro equipo femenino de categoría 1000",
   img: {
     name: "equipos/equipos-2",
     alt: "Foto de equipo Federados",

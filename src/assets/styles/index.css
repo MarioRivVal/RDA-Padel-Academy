@@ -68,6 +68,7 @@ a {
 
 .black-bg-section {
   background-color: var(--dark-color);
+  border-radius: 2rem;
 }
 
 /* UTILITIES */

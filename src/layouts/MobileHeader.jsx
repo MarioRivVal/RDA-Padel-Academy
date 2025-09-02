@@ -59,7 +59,7 @@ export default function MobileHeader() {
           alt="Logo de la Academia RDA"
           className={s.logo}
           overlay={false}
-          delay={100}
+          delay={50}
         />
         <div className={s.btn} onClick={handleOpenNav}>
           <span className={s.icon}>&nbsp;</span>
@@ -82,7 +82,7 @@ export default function MobileHeader() {
             alt="Raqueta de padel con logo de la Academia RDA"
             className={` ${s.headerImage} ${s.raquetaImage}`}
             overlay={false}
-            delay={300}
+            delay={100}
           />
           <div className={s.heading} role="heading">
             <p id={s.p1} className={`u-text-white`}>
@@ -110,7 +110,7 @@ export default function MobileHeader() {
             alt="Coach Mario con material de padel caminado en la pista"
             className={` ${s.headerImage} ${s.coachImage}`}
             overlay={true}
-            delay={500}
+            delay={200}
           />
         </div>
       </header>
