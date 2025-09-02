@@ -1,9 +1,6 @@
 import { useMemo, useState } from "react";
 import s from "../assets/styles/layouts/eventosSection.module.css";
-import {
-  greenBtn,
-  whiteBtn,
-} from "../assets/styles/components/button.module.css";
+import b from "../assets/styles/components/button.module.css";
 import Button from "../components/Button";
 import TitleBox from "../components/TitleBox";
 import { eventos } from "../data/headings";
@@ -60,21 +57,27 @@ export default function EventosSection() {
           <Button
             text="Eventos"
             onClick={() => handleTab("eventos")}
-            className={activeTab === "eventos" ? greenBtn : whiteBtn}
+            className={`${b.tabBtn} ${
+              activeTab === "eventos" ? b.tabBtnActive : ""
+            }`}
             aria-selected={activeTab === "eventos"}
             role="tab"
           />
           <Button
             text="Noticias"
             onClick={() => handleTab("noticias")}
-            className={activeTab === "noticias" ? greenBtn : whiteBtn}
+            className={`${b.tabBtn} ${
+              activeTab === "noticias" ? b.tabBtnActive : ""
+            }`}
             aria-selected={activeTab === "noticias"}
             role="tab"
           />
           <Button
             text="Clases"
             onClick={() => handleTab("clases")}
-            className={activeTab === "clases" ? greenBtn : whiteBtn}
+            className={`${b.tabBtn} ${
+              activeTab === "clases" ? b.tabBtnActive : ""
+            }`}
             aria-selected={activeTab === "clases"}
             role="tab"
           />
@@ -119,7 +122,7 @@ export default function EventosSection() {
           <div className={s.btnsBox}>
             <Button
               text="Escribenos"
-              className={greenBtn}
+              className={b.greenBtn}
               href="https://wa.me/+34628800205"
               target="_blank"
             />

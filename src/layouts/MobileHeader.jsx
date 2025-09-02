@@ -81,7 +81,7 @@ export default function MobileHeader() {
             ext="png"
             alt="Raqueta de padel con logo de la Academia RDA"
             className={` ${s.headerImage} ${s.raquetaImage}`}
-            overlay={false}
+            overlay={true}
             delay={100}
           />
           <div className={s.heading} role="heading">

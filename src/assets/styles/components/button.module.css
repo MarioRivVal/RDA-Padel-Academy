@@ -29,6 +29,25 @@
   color: var(--dark-color);
 }
 
+.tabBtn {
+  padding: 1.2rem 2.4rem;
+  border-radius: 2rem;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  border: 0.1rem solid var(--primary-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.tabBtnActive {
+  border-color: transparent;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
 .whiteBtn:hover {
   background-color: var(--primary-color);
   color: var(--dark-color);

@@ -26,7 +26,7 @@ export default function DesktopHeader() {
           ext="png"
           alt="Raqueta de padel con logo de la Academia RDA"
           className={`${s.headerImage} ${s.raquetaImage}`}
-          overlay={false}
+          overlay={true}
           delay={300}
         />
         <p id={s.p3} className={`u-text-green`}>
