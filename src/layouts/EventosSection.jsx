@@ -6,13 +6,20 @@ import TitleBox from "../components/TitleBox";
 import { eventos } from "../data/headings";
 import ResponsiveImage from "../components/ResponsiveImage";
 import ArrowGreenIcon from "../assets/icons/arrowGreen.svg?react";
-import { eventosData, clasesData, noticiasData } from "../data/eventos";
+import {
+  eventosData,
+  clasesData,
+  noticiasData,
+  partnersList,
+} from "../data/eventos";
 
 const DATASETS = {
   eventos: eventosData,
   clases: clasesData, // <- “Cursos” usa tus clasesData
   noticias: noticiasData,
 };
+
+const isSliderEmpty = (items) => items.length === 0;
 
 export default function EventosSection() {
   // Tab activo y un índice independiente por tab (así no “salta” al cambiar).
@@ -55,6 +62,15 @@ export default function EventosSection() {
         {/* TABS */}
         <div className={s.categoryBox} role="tablist" aria-label="Categorías">
           <Button
+            text="Clases"
+            onClick={() => handleTab("clases")}
+            className={`${b.tabBtn} ${
+              activeTab === "clases" ? b.tabBtnActive : ""
+            }`}
+            aria-selected={activeTab === "clases"}
+            role="tab"
+          />
+          <Button
             text="Eventos"
             onClick={() => handleTab("eventos")}
             className={`${b.tabBtn} ${
@@ -72,50 +88,62 @@ export default function EventosSection() {
             aria-selected={activeTab === "noticias"}
             role="tab"
           />
-          <Button
-            text="Clases"
-            onClick={() => handleTab("clases")}
-            className={`${b.tabBtn} ${
-              activeTab === "clases" ? b.tabBtnActive : ""
-            }`}
-            aria-selected={activeTab === "clases"}
-            role="tab"
-          />
         </div>
 
         {/* SLIDER */}
         <div className={s.sliderBox}>
           <div className={s.sliders} style={carrouselStyle}>
-            {currentData.map((item) => (
-              <div key={item.id} className={s.slider} style={slideStyle}>
+            {isSliderEmpty(currentData) ? (
+              <div className={s.slider} style={slideStyle}>
                 <ResponsiveImage
-                  name={`eventos/${item.img}`}
-                  alt={item.alt}
+                  name={`eventos/placeholder`}
+                  alt="Imagen sin contexto, solo un placeholder"
                   ext="png"
                   className={s.imgBox}
                   overlay={true}
                 />
 
                 <div className={s.description}>
-                  <div>
-                    {item.subTitle && (
-                      <h4 className={`${s.title4} u-text-green`}>
-                        {item.subTitle}
-                      </h4>
-                    )}
-                    <h3 className={`${s.title3} u-text-white`}>{item.title}</h3>
-                  </div>
-
-                  {item.details?.length > 0 && (
-                    <ul className={s.list}>
-                      {item.details.map((li, i) => (
-                        <li key={i}>{li}</li>
-                      ))}
-                    </ul>
-                  )}
+                  <p className={s.placeholderText}>
+                    {" "}
+                    {`Muy prontos más ${activeTab}`}
+                  </p>
                 </div>
               </div>
-            ))}
+            ) : (
+              currentData.map((item) => (
+                <div key={item.id} className={s.slider} style={slideStyle}>
+                  <ResponsiveImage
+                    name={`eventos/${item.img}`}
+                    alt={item.alt}
+                    ext="png"
+                    className={s.imgBox}
+                    overlay={true}
+                  />
+
+                  <div className={s.description}>
+                    <div>
+                      {item.subTitle && (
+                        <h4 className={`${s.title4} u-text-green`}>
+                          {item.subTitle}
+                        </h4>
+                      )}
+                      <h3 className={`${s.title3} u-text-white`}>
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    {item.details?.length > 0 && (
+                      <ul className={s.list}>
+                        {item.details.map((li, i) => (
+                          <li key={i}>{li}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              ))
+            )}
           </div>
 
           {/* CTA + Flechas */}
@@ -126,22 +154,24 @@ export default function EventosSection() {
               href="https://wa.me/+34628800205"
               target="_blank"
             />
-            <div className={s.iconsBox}>
-              <button
-                className={`${s.btnLeft} ${s.icons}`}
-                onClick={() => handleSlider("left")}
-                aria-label="Anterior"
-              >
-                <ArrowGreenIcon />
-              </button>
-              <button
-                className={`${s.btnRight} ${s.icons}`}
-                onClick={() => handleSlider("right")}
-                aria-label="Siguiente"
-              >
-                <ArrowGreenIcon />
-              </button>
-            </div>
+            {currentData.length > 1 && (
+              <div className={s.iconsBox}>
+                <button
+                  className={`${s.btnLeft} ${s.icons}`}
+                  onClick={() => handleSlider("left")}
+                  aria-label="Anterior"
+                >
+                  <ArrowGreenIcon />
+                </button>
+                <button
+                  className={`${s.btnRight} ${s.icons}`}
+                  onClick={() => handleSlider("right")}
+                  aria-label="Siguiente"
+                >
+                  <ArrowGreenIcon />
+                </button>
+              </div>
+            )}
           </div>
         </div>
 
@@ -151,18 +181,34 @@ export default function EventosSection() {
             <span className="u-text-green">Partners,</span> que suman valor
           </h3>
           <div className={s.partners}>
-            <ResponsiveImage
-              name="partners/netneo"
-              ext="png"
-              alt="Logo de netneo.es"
-              overlay={false}
-            />
-            <ResponsiveImage
-              name="partners/adarsa"
-              ext="png"
-              alt="Logo de grupo Adarsa"
-              overlay={false}
-            />
+            <div className={s.track} aria-hidden="true">
+              <div className={s.group}>
+                {partnersList.map((item) => (
+                  <ResponsiveImage
+                    key={`a-${item.id}`}
+                    name={`partners/${item.img}`}
+                    ext="png"
+                    alt={`Logo de ${item.alt}`}
+                    overlay={false}
+                    className={s.partnersImg}
+                  />
+                ))}
+              </div>
+
+              {/* Duplicado para loop infinito */}
+              <div className={s.group} aria-hidden="true">
+                {partnersList.map((item) => (
+                  <ResponsiveImage
+                    key={`b-${item.id}`}
+                    name={`partners/${item.img}`}
+                    ext="png"
+                    alt={`Logo de ${item.alt}`}
+                    overlay={false}
+                    className={s.partnersImg}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
