@@ -7,7 +7,7 @@ const ScrollButtonsGroup = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    setIsVisible(window.scrollY > 300);
+    setIsVisible(window.scrollY > 800);
   };
 
   const scrollToTop = () => {

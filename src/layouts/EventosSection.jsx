@@ -23,7 +23,7 @@ const isSliderEmpty = (items) => items.length === 0;
 
 export default function EventosSection() {
   // Tab activo y un índice independiente por tab (así no “salta” al cambiar).
-  const [activeTab, setActiveTab] = useState("eventos");
+  const [activeTab, setActiveTab] = useState("clases");
   const [indices, setIndices] = useState({
     eventos: 0,
     clases: 0,
@@ -191,6 +191,9 @@ export default function EventosSection() {
                     alt={`Logo de ${item.alt}`}
                     overlay={false}
                     className={s.partnersImg}
+                    delay={0}
+                    duration={0}
+                    once={true}
                   />
                 ))}
               </div>

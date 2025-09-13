@@ -1,3 +1,5 @@
+// layouts/Banner.jsx
+import { useState } from "react"; // <-- quita "Children"
 import s from "../assets/styles/layouts/banner.module.css";
 import {
   greenBtn,
@@ -8,8 +10,15 @@ import ResponsiveImage from "../components/ResponsiveImage";
 import ArrowIcon from "../assets/icons/arrow.svg?react";
 import FacebookIcon from "../assets/icons/facebook.svg?react";
 import InstagramIcon from "../assets/icons/instagram.svg?react";
+import Modal from "../components/Modal";
+import Terms from "./Terms";
 
 export default function Banner({ type }) {
+  const [isModalActive, setModalActive] = useState(false); // <-- OK
+
+  const openModal = () => setModalActive(true);
+  const closeModal = () => setModalActive(false);
+
   return (
     <>
       <div className={s.container}>
@@ -48,8 +57,8 @@ export default function Banner({ type }) {
             {type === "footer" ? (
               <>
                 <Button
-                  text="Info@rdapadel.com"
-                  href="mailto:nfo@rdapadel.com"
+                  text="info@rdapadel.com"
+                  href="mailto:info@rdapadel.com" // <-- corregido mailto
                   className={`${greenBtn} u-lowercase`}
                 />
                 <Button
@@ -61,34 +70,35 @@ export default function Banner({ type }) {
             ) : (
               <>
                 <Button
-                  text="Escribenos"
+                  text="Escríbenos"
                   className={greenBtn}
                   href="https://wa.me/+34628800205"
                   target="_blank"
+                  rel="noopener noreferrer"
                 />
                 <Button text="Eventos" className={blackBtn} href="#eventos" />
               </>
             )}
           </div>
+
           <h1 className={`${s.title} u-text-white`}>
             {type === "footer" ? (
               <>
-                Unete al <span className="u-text-green">Equipo</span>{" "}
+                Únete al <span className="u-text-green">Equipo</span>
               </>
             ) : (
               <>
-                {" "}
-                Tu Academia de <span className="u-text-green">Pádel</span>{" "}
+                Tu Academia de <span className="u-text-green">Pádel</span>
               </>
             )}
           </h1>
+
           <div
             className={s.ctaMap}
             role="group"
             aria-label="Ubicación. Pulsa el icono para abrir Maps"
           >
             <p className={s.textMap}>¿Dónde estamos? Descúbrelo en Maps</p>
-
             <a
               className={s.iconMap}
               href="https://maps.google.com/?q=RDA+Padel+Academia"
@@ -101,24 +111,41 @@ export default function Banner({ type }) {
           </div>
         </header>
       </div>
+
       {type === "footer" && (
         <div className={s.copyrightBox}>
           <div className={s.copyRightImg}>
             <img
               src="./images/minilogo.png"
-              alt="logo de la escuela de Padel"
+              alt="logo de la escuela de Pádel"
             />
-            <p> RDA Padel Academy &copy; {new Date().getFullYear()}</p>
+            <p>RDA Padel Academy &copy; {new Date().getFullYear()}</p>
           </div>
-          <p>Todos los derecho reservados</p>
+          <p>Todos los derechos reservados</p>
+
+          {/* mejor como botón semántico */}
+          <button type="button" className={s.legalLink} onClick={openModal}>
+            Términos de uso
+          </button>
+
           <p>
-            Creado con pasión por{" "}
-            <a href="" className="u-text-green">
-              netneo.es
+            Diseño y desarrollo por{" "}
+            <a
+              href="https://www.netneo.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="u-text-green"
+            >
+              netneo
             </a>
           </p>
         </div>
       )}
+
+      {/* Pásale onClose al Modal */}
+      <Modal isActive={isModalActive} onClose={closeModal}>
+        <Terms />
+      </Modal>
     </>
   );
 }

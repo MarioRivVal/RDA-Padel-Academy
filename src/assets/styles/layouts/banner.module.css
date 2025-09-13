@@ -101,10 +101,19 @@
 .copyRightImg img {
   width: 12%;
 }
-.copyrightBox p {
+.copyrightBox p,
+.legalLink {
   color: var(--light-color);
   font-size: 1.6rem;
   font-family: var(--font-paragraph);
+}
+
+.legalLink {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
 @media (min-width: 1024px) {
@@ -120,6 +129,9 @@
 
   .copyrightBox {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
   }
 }
 
