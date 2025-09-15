@@ -14,7 +14,6 @@ export default function CoachSection() {
           <Reveal
             key={item.id}
             as="div"
-            className={s.item}
             delay={i * 120}
             distance={50}
             duration={800}

@@ -10,14 +10,6 @@
   gap: 4rem;
 }
 
-.grid > .item:nth-child(even) {
-  align-items: flex-end;
-}
-
-.grid > .item:nth-child(even) .paragraph {
-  text-align: right;
-}
-
 .item {
   display: flex;
   flex-direction: column;
@@ -25,6 +17,7 @@
 }
 
 .title {
+  display: block;
   font-family: var(--font-primary);
   font-size: 2.2rem;
 }
@@ -35,6 +28,12 @@
   white-space: pre-line;
   font-weight: 300;
   line-height: 1.4;
+}
+
+/* ✨ Pares a la derecha */
+.grid > *:nth-child(even) .item {
+  align-items: flex-end; /* empuja icon/título/paragraph a la derecha */
+  text-align: right;
 }
 
 .icon {

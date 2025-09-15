@@ -39,7 +39,6 @@ export default function MobileHeader() {
     if (isNavActive && navRef.current && backgroundRef.current) {
       const navHeight = navRef.current.offsetHeight;
       backgroundRef.current.style.setProperty("--nav-height", `${navHeight}px`);
-      console.log(navHeight);
     }
   }, [isNavActive]);
 
@@ -82,7 +81,7 @@ export default function MobileHeader() {
             alt="Raqueta de padel con logo de la Academia RDA"
             className={` ${s.headerImage} ${s.raquetaImage}`}
             overlay={true}
-            delay={100}
+            delay={50}
           />
           <div className={s.heading} role="heading">
             <p id={s.p1} className={`u-text-white`}>
