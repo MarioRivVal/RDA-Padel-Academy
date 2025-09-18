@@ -9,6 +9,10 @@
   --font-paragraph: "Montserrat", sans-serif;
 
   --nav-height: 11rem;
+
+  --slider-w: 10rem;
+  --slider-h: 6rem;
+  --quantity: 6;
 }
 
 *,
@@ -45,6 +49,9 @@ a {
   text-decoration: none;
   color: inherit;
   display: inline-block;
+}
+picture {
+  display: block;
 }
 
 .main,

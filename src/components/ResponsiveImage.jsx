@@ -10,14 +10,18 @@ const ResponsiveImage = ({
   delay,
   duration,
   once,
+  reveal = true,
 }) => {
-  const { ref, style } = useRevealOnScroll({
+  const revealProps = useRevealOnScroll({
     distance: 50,
     duration: duration || 1000,
     delay: delay || 50,
     direction: "up",
     once,
   });
+
+  const ref = reveal ? revealProps.ref : null;
+  const style = reveal ? revealProps.style : undefined;
 
   return (
     <picture

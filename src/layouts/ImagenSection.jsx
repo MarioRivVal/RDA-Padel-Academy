@@ -45,6 +45,7 @@ export default function ImagenSection() {
                   className={s.shirtImg}
                   overlay={false}
                   once={true}
+                  reveal={false}
                 />
               ))}
             </div>

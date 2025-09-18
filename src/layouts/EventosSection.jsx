@@ -149,9 +149,9 @@ export default function EventosSection() {
           {/* CTA + Flechas */}
           <div className={s.btnsBox}>
             <Button
-              text="Escribenos"
+              text="Apuntate"
               className={b.greenBtn}
-              href="https://wa.me/+34628800205"
+              href="http://docs.google.com/forms/d/e/1FAIpQLSd1Ln1w_jchO5R6U4Q0JV-aI96LCfC-4ySx4UOzMjHe-wRR2Q/viewform"
               target="_blank"
             />
             {currentData.length > 1 && (
@@ -180,37 +180,23 @@ export default function EventosSection() {
           <h3>
             <span className="u-text-green">Partners,</span> que suman valor
           </h3>
-          <div className={s.partners}>
-            <div className={s.track} aria-hidden="true">
-              <div className={s.group}>
-                {partnersList.map((item) => (
+          <div className={s.partnersSlider}>
+            <div className={s.sliderTrack}>
+              {partnersList.map((item, index) => (
+                <div
+                  key={`a-${item.id}`}
+                  className={s.sliderImgBox}
+                  style={{ "--position": index - 4 }}
+                >
                   <ResponsiveImage
-                    key={`a-${item.id}`}
                     name={`partners/${item.img}`}
                     ext="png"
                     alt={`Logo de ${item.alt}`}
+                    className={s.sliderImg}
                     overlay={false}
-                    className={s.partnersImg}
-                    delay={0}
-                    duration={0}
-                    once={true}
                   />
-                ))}
-              </div>
-
-              {/* Duplicado para loop infinito */}
-              <div className={s.group} aria-hidden="true">
-                {partnersList.map((item) => (
-                  <ResponsiveImage
-                    key={`b-${item.id}`}
-                    name={`partners/${item.img}`}
-                    ext="png"
-                    alt={`Logo de ${item.alt}`}
-                    overlay={false}
-                    className={s.partnersImg}
-                  />
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

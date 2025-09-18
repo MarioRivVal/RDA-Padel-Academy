@@ -6,7 +6,7 @@ export default function IntroBox({ data, bg, children }) {
   const { ref, style } = useRevealOnScroll({
     distance: 50,
     duration: 1000,
-    delay: 500,
+    delay: 200,
     direction: "up",
   });
 

@@ -24,6 +24,7 @@
   flex: 0 0 calc(100% / var(--slides, 1));
   border-radius: 1rem;
   padding: 1rem;
+  contain: layout;
 }
 
 .shirtImg img {
